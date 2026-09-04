@@ -1,0 +1,547 @@
+:root {
+  --bg: #F8F3EA;
+  --bg-soft: #EFE4D2;
+
+  --text: #4A3A2A;
+  --muted: #806F5A;
+
+  --accent: #B08D57;
+
+  --white: #FFFDF8;
+  --dark: #6F542F;
+
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Montserrat", Arial, sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  min-height: 100vh;
+}
+
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.gift-header {
+  padding: 25px 20px 45px;
+  text-align: center;
+}
+
+
+.back-button {
+  display: block;
+
+  width: fit-content;
+
+  color: var(--dark);
+
+  font-size: 12px;
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  text-decoration: none;
+
+  margin-bottom: 35px;
+}
+
+
+.header-content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+
+.small-title {
+  display: block;
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  color: var(--accent);
+
+  margin-bottom: 12px;
+}
+
+
+.header-content h1 {
+  font-family: var(--serif);
+
+  font-size: 42px;
+  font-weight: 500;
+
+  line-height: 1;
+
+  color: var(--dark);
+}
+
+
+.divider {
+  width: 55px;
+  height: 1px;
+
+  background: var(--accent);
+
+  margin: 22px auto;
+}
+
+
+.header-content p {
+  max-width: 520px;
+
+  margin: auto;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   LISTA
+========================= */
+
+.gift-list {
+  max-width: 1150px;
+
+  margin: auto;
+
+  padding: 10px 18px 70px;
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 28px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.gift-card {
+  background: var(--white);
+
+  border: 1px solid rgba(176, 141, 87, 0.25);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.gift-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(74, 58, 42, 0.08);
+}
+
+
+.gift-image {
+  width: 100%;
+
+  aspect-ratio: 3 / 4;
+
+  overflow: hidden;
+
+  background: var(--bg-soft);
+}
+
+
+.gift-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.5s ease;
+}
+
+
+.gift-card:hover
+.gift-image img {
+  transform: scale(1.03);
+}
+
+
+.gift-content {
+  padding: 23px 20px 25px;
+
+  text-align: center;
+}
+
+
+.gift-price {
+  display: block;
+
+  color: var(--accent);
+
+  font-family: var(--serif);
+
+  font-size: 26px;
+
+  font-weight: 600;
+
+  margin-bottom: 9px;
+}
+
+
+.gift-content h2 {
+  font-family: var(--serif);
+
+  font-size: 22px;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  color: var(--text);
+
+  min-height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+
+.gift-button {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  background: transparent;
+
+  border: 1px solid var(--accent);
+
+  color: var(--dark);
+
+  font-family: var(--sans);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.gift-button:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+
+/* =========================
+   MODAL PIX
+========================= */
+
+.pix-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+
+.pix-modal.active {
+  display: flex;
+}
+
+
+.modal-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(35, 26, 18, 0.7);
+
+  backdrop-filter: blur(4px);
+}
+
+
+.modal-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 430px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: var(--white);
+
+  padding: 38px 24px 28px;
+
+  text-align: center;
+
+  box-shadow:
+    0 20px 60px
+    rgba(0, 0, 0, 0.25);
+}
+
+
+.modal-close {
+  position: absolute;
+
+  top: 10px;
+  right: 15px;
+
+  border: none;
+
+  background: transparent;
+
+  font-family: var(--serif);
+
+  font-size: 34px;
+
+  color: var(--muted);
+
+  cursor: pointer;
+}
+
+
+.modal-small-title {
+  display: block;
+
+  color: var(--accent);
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 10px;
+}
+
+
+.modal-content h2 {
+  font-family: var(--serif);
+
+  font-size: 28px;
+
+  font-weight: 500;
+
+  color: var(--dark);
+
+  margin-bottom: 5px;
+}
+
+
+.modal-value {
+  font-family: var(--serif);
+
+  font-size: 30px;
+
+  color: var(--accent);
+
+  font-weight: 600;
+
+  margin-bottom: 12px;
+}
+
+
+.modal-description {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  margin-bottom: 22px;
+}
+
+
+/* =========================
+   QR CODE
+========================= */
+
+.qr-code {
+  width: fit-content;
+
+  margin: 0 auto 25px;
+
+  padding: 12px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--bg-soft);
+}
+
+
+.qr-code img,
+.qr-code canvas {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =========================
+   PIX COPIA E COLA
+========================= */
+
+.modal-content label {
+  display: block;
+
+  text-align: left;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  color: var(--dark);
+
+  margin-bottom: 7px;
+}
+
+
+#pixCode {
+  width: 100%;
+
+  min-height: 90px;
+
+  resize: none;
+
+  padding: 12px;
+
+  border: 1px solid var(--bg-soft);
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  font-size: 10px;
+
+  line-height: 1.4;
+
+  outline: none;
+
+  word-break: break-all;
+}
+
+
+.copy-button {
+  width: 100%;
+
+  margin-top: 12px;
+
+  padding: 14px;
+
+  border: none;
+
+  background: var(--accent);
+
+  color: var(--white);
+
+  font-family: var(--sans);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+}
+
+
+.copy-feedback {
+  min-height: 18px;
+
+  margin-top: 10px;
+
+  font-size: 11px;
+
+  color: var(--accent);
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (min-width: 650px) {
+
+  .gift-list {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .header-content h1 {
+    font-size: 52px;
+  }
+
+}
+
+
+@media (min-width: 1000px) {
+
+  .gift-list {
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    gap: 32px;
+  }
+
+
+  .gift-header {
+    padding-top: 35px;
+  }
+
+}

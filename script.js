@@ -97,6 +97,8 @@ revealElements.forEach((element) => observer.observe(element));
    ============================== */
 
 // Troque o endereço abaixo pelo link real da lista.
+
+/*
 const giftButton = document.getElementById("giftButton");
 
 giftButton.addEventListener("click", (event) => {
@@ -106,4 +108,6 @@ giftButton.addEventListener("click", (event) => {
   // window.open("https://www.exemplo.com/lista", "_blank");
 
   alert("Aqui entrará o link da lista de presentes.");
-});
+
+
+})*/;
