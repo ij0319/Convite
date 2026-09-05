@@ -1,0 +1,288 @@
+:root {
+  --bg: #F8F3EA;
+  --bg-soft: #EFE4D2;
+  --text: #4A3A2A;
+  --muted: #806F5A;
+  --accent: #B08D57;
+  --white: #FFFDF8;
+  --dark: #6F542F;
+
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Montserrat", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  overflow-x: hidden;
+}
+
+.back-button {
+  display: block;
+
+  width: fit-content;
+
+  color: var(--dark);
+
+  font-size: 12px;
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  text-decoration: none;
+
+  margin-bottom: 35px;
+}
+
+.manual {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+
+/* =========================
+   CABEÇALHO
+   ========================= */
+
+.manual-header {
+  text-align: center;
+  padding: 30px 10px 70px;
+}
+
+.eyebrow {
+  display: block;
+  font-size: .65rem;
+  letter-spacing: .35em;
+  color: var(--muted);
+  margin-bottom: 25px;
+}
+
+.ornament {
+  color: var(--accent);
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.manual-header h1 {
+  font-family: var(--serif);
+  font-size: clamp(3.5rem, 14vw, 6rem);
+  font-weight: 500;
+  line-height: .85;
+  color: var(--text);
+}
+
+.manual-header h1 span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.couple {
+  margin-top: 30px;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  color: var(--muted);
+}
+
+.couple span {
+  color: var(--accent);
+  padding: 0 8px;
+}
+
+
+/* =========================
+   INTRODUÇÃO
+   ========================= */
+
+.intro {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.intro p {
+  font-size: .9rem;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+
+/* =========================
+   CARDS
+   ========================= */
+
+.manual-card,
+.final-message {
+  background: var(--white);
+  padding: 45px 28px;
+  margin-bottom: 25px;
+  text-align: center;
+
+  border: 1px solid rgba(176, 141, 87, .18);
+
+  box-shadow:
+    0 10px 35px rgba(74, 58, 42, .05);
+}
+
+.section-icon {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.manual-card h2,
+.final-message h2 {
+  font-family: var(--serif);
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text);
+}
+
+.divider {
+  width: 45px;
+  height: 1px;
+  background: var(--accent);
+  margin: 25px auto;
+}
+
+.manual-card p,
+.final-message p {
+  max-width: 600px;
+  margin: 0 auto 18px;
+
+  font-size: .88rem;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.manual-card strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+
+/* =========================
+   MENSAGEM FINAL
+   ========================= */
+
+.final-message {
+  background: var(--bg-soft);
+  padding: 55px 28px;
+  margin-top: 45px;
+}
+
+.final-message p {
+  color: var(--text);
+}
+
+.signature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 35px;
+
+  color: var(--muted);
+  font-family: var(--serif);
+}
+
+.signature span:first-child {
+  font-size: 1rem;
+}
+
+.signature strong {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.signature i {
+  color: var(--accent);
+  font-style: normal;
+  padding: 0 5px;
+}
+
+
+/* =========================
+   RODAPÉ
+   ========================= */
+
+.manual-footer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+
+  margin-top: 45px;
+
+  font-size: .6rem;
+  letter-spacing: .2em;
+  color: var(--muted);
+}
+
+
+/* =========================
+   DESKTOP
+   ========================= */
+
+@media (min-width: 700px) {
+
+  .manual {
+    padding: 80px 30px;
+  }
+
+  .manual-card,
+  .final-message {
+    padding: 55px 70px;
+  }
+
+  .manual-card:hover {
+    transform: translateY(-2px);
+    transition: transform .3s ease;
+  }
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 500px) {
+
+  .manual {
+    padding: 40px 15px;
+  }
+
+  .manual-header {
+    padding-bottom: 50px;
+  }
+
+  .manual-card,
+  .final-message {
+    padding: 38px 22px;
+  }
+
+  .manual-card h2,
+  .final-message h2 {
+    font-size: 2.35rem;
+  }
+
+  .manual-card p,
+  .final-message p,
+  .intro p {
+    font-size: .84rem;
+  }
+}
