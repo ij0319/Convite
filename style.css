@@ -16,18 +16,15 @@
   --sans: "Montserrat", Arial, sans-serif;
 }
 
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
-
 
 body {
   background: var(--bg);
@@ -35,7 +32,6 @@ body {
   font-family: var(--sans);
   overflow-x: hidden;
 }
-
 
 section {
   position: relative;
@@ -120,7 +116,6 @@ section {
   z-index: 2;
 
   color: var(--white);
-
   text-align: center;
 
   padding: 30px;
@@ -134,59 +129,45 @@ section {
 .eyebrow {
   font-size: .68rem;
   font-weight: 600;
-
   letter-spacing: .25em;
-
   text-transform: uppercase;
 
   margin-bottom: 20px;
 }
 
-
 h1,
 h2 {
   font-family: var(--serif);
-
   font-weight: 500;
-
   line-height: .95;
 }
-
 
 h1 {
   font-size: clamp(4rem, 18vw, 6rem);
 }
-
 
 h1 span {
   font-style: italic;
   font-weight: 400;
 }
 
-
 h2 {
   font-size: clamp(2.8rem, 12vw, 4.5rem);
-
   margin-bottom: 30px;
 }
-
 
 .date-small {
   margin-top: 25px;
 
   font-size: .8rem;
-
   letter-spacing: .3em;
 }
-
 
 .scroll-hint {
   margin-top: 90px;
 
   font-size: .65rem;
-
   letter-spacing: .18em;
-
   text-transform: uppercase;
 
   opacity: .85;
@@ -202,18 +183,14 @@ h2 {
   color: var(--accent);
 }
 
-
 .hero .ornament,
 .closing .ornament {
   margin: 25px 0;
-
   color: var(--white);
 }
 
-
 .ornament-line {
   font-size: .7rem;
-
   margin-bottom: 45px;
 }
 
@@ -228,10 +205,8 @@ h2 {
   color: var(--muted);
 
   font-size: .9rem;
-
   line-height: 1.9;
 }
-
 
 blockquote {
   max-width: 450px;
@@ -239,14 +214,10 @@ blockquote {
   margin-top: 45px;
 
   font-family: var(--serif);
-
   font-size: 1.8rem;
-
   font-style: italic;
-
   line-height: 1.2;
 }
-
 
 blockquote cite {
   display: block;
@@ -254,13 +225,9 @@ blockquote cite {
   margin-top: 15px;
 
   font-family: var(--sans);
-
   font-size: .65rem;
-
   font-style: normal;
-
   letter-spacing: .15em;
-
   text-transform: uppercase;
 
   color: var(--muted);
@@ -272,47 +239,96 @@ blockquote cite {
    ============================== */
 
 .details {
+  position: relative;
+
   background: var(--bg-soft);
+
+  overflow: hidden;
+
+  isolation: isolate;
 }
 
+
+/* ==============================
+   FUNDO DA CONTAGEM REGRESSIVA
+   ============================== */
+
+/*
+   A imagem fica atrás de todo o conteúdo
+   da seção de detalhes.
+*/
+
+.details::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image: url("assets/countdown-bg.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: -2;
+}
+
+
+/*
+   Camada translúcida para manter
+   os textos perfeitamente legíveis.
+*/
+
+.details::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(248, 243, 234, .82),
+    rgba(248, 243, 234, .60),
+    rgba(248, 243, 234, .72)
+  );
+
+  z-index: -1;
+}
+
+
+/* ==============================
+   DATA
+   ============================== */
 
 .date-card {
   border-top: 1px solid rgba(64, 58, 54, .3);
   border-bottom: 1px solid rgba(64, 58, 54, .3);
 
   padding: 25px 45px;
-
   margin: 10px 0 20px;
 
   display: flex;
-
   flex-direction: column;
 
   gap: 5px;
 }
 
-
 .date-card span {
   font-size: .65rem;
-
   letter-spacing: .2em;
 }
-
 
 .date-card strong {
   font-family: var(--serif);
 
   font-size: 5rem;
-
   font-weight: 500;
 
   line-height: .9;
 }
 
-
 .time {
   font-family: var(--serif);
-
   font-size: 1.6rem;
 }
 
@@ -323,20 +339,15 @@ blockquote cite {
 
 .countdown-title {
   margin-top: 70px;
-
   margin-bottom: 20px;
 
   font-size: .65rem;
-
   font-weight: 600;
-
   letter-spacing: .3em;
 }
 
-
 .countdown {
   width: 100%;
-
   max-width: 430px;
 
   display: grid;
@@ -346,30 +357,22 @@ blockquote cite {
   gap: 8px;
 }
 
-
 .countdown div {
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
 }
-
 
 .countdown strong {
   font-family: var(--serif);
 
   font-size: 2.3rem;
-
   font-weight: 500;
 }
 
-
 .countdown span {
   font-size: .55rem;
-
   letter-spacing: .08em;
-
   text-transform: uppercase;
 
   color: var(--muted);
@@ -382,7 +385,6 @@ blockquote cite {
 
 .location-card {
   width: 100%;
-
   max-width: 450px;
 
   padding: 35px 25px;
@@ -392,30 +394,24 @@ blockquote cite {
   border: 1px solid rgba(64, 58, 54, .12);
 }
 
-
 .location-icon {
   font-size: 2.5rem;
-
   margin-bottom: 15px;
 }
-
 
 .location-card h3 {
   font-family: var(--serif);
 
   font-size: 2rem;
-
   font-weight: 500;
 
   margin-bottom: 12px;
 }
 
-
 .location-card p {
   color: var(--muted);
 
   font-size: .9rem;
-
   line-height: 1.8;
 
   margin-bottom: 25px;
@@ -428,42 +424,33 @@ blockquote cite {
 
 .buttons {
   width: 100%;
-
   max-width: 400px;
 
   display: flex;
-
   flex-direction: column;
 
   gap: 12px;
 }
 
-
 .button {
   width: 100%;
-
   min-height: 55px;
 
   padding: 18px 20px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   text-decoration: none;
 
   background: var(--dark);
-
   color: var(--white);
 
   border: 1px solid var(--dark);
 
   font-size: .68rem;
-
   font-weight: 600;
-
   letter-spacing: .16em;
 
   transition:
@@ -471,17 +458,13 @@ blockquote cite {
     opacity .2s;
 }
 
-
 .button-outline {
   background: transparent;
-
   color: var(--dark);
 }
 
-
 .button:hover {
   transform: translateY(-2px);
-
   opacity: .9;
 }
 
@@ -498,7 +481,6 @@ blockquote cite {
   color: var(--muted);
 
   font-size: .70rem;
-
   line-height: 1.7;
 }
 
@@ -511,10 +493,8 @@ blockquote cite {
   font-size: clamp(2.8rem, 11vw, 4.5rem);
 }
 
-
 .closing-content > p:last-child {
   font-family: var(--serif);
-
   font-size: 1.8rem;
 }
 
@@ -529,15 +509,12 @@ blockquote cite {
   z-index: 100;
 
   right: 18px;
-
   bottom: 18px;
 
   width: 48px;
-
   height: 48px;
 
   border: 1px solid rgba(64, 58, 54, .35);
-
   border-radius: 50%;
 
   background: rgba(246, 241, 235, .88);
@@ -550,7 +527,6 @@ blockquote cite {
 
   font-size: 1.2rem;
 }
-
 
 .music-button.playing {
   animation: pulse 1.5s infinite;
@@ -571,10 +547,8 @@ blockquote cite {
     transform 1s ease;
 }
 
-
 .reveal.visible {
   opacity: 1;
-
   transform: translateY(0);
 }
 
@@ -584,11 +558,9 @@ blockquote cite {
    ============================== */
 
 @keyframes pulse {
-
   50% {
     transform: scale(1.08);
   }
-
 }
 
 
@@ -616,7 +588,6 @@ blockquote cite {
     min-height: 100svh;
 
     background-size: cover;
-
     background-position: center center;
   }
 
@@ -642,9 +613,7 @@ blockquote cite {
     background-color: var(--bg);
 
     background-size: auto 100%;
-
     background-position: center center;
-
     background-repeat: no-repeat;
   }
 
