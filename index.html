@@ -1,47 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f6f1eb">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#f6f1eb"
+  >
+
   <title>Erika & Isaias | Nosso Casamento</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
 </head>
+
+
 <body>
 
-  <!-- Música: coloque seu arquivo em assets/music.mp3 -->
-  <audio id="weddingMusic" loop preload="metadata">
-    <source src="assets/music.mp3" type="audio/mpeg">
+  <!-- ==============================
+       MÚSICA
+       ============================== -->
+
+  <audio
+    id="weddingMusic"
+    loop
+    preload="metadata"
+  >
+    <source
+      src="assets/music.mp3"
+      type="audio/mpeg"
+    >
   </audio>
 
-  <button class="music-button" id="musicButton" aria-label="Tocar música">
-    <span id="musicIcon">♫</span>
+
+  <!-- ==============================
+       BOTÃO DE MÚSICA
+       ============================== -->
+
+  <button
+    class="music-button"
+    id="musicButton"
+    aria-label="Tocar música"
+  >
+
+    <span id="musicIcon">
+      ♫
+    </span>
+
+    <span class="music-text">
+      Clique aqui para ouvir nossa música
+    </span>
+
   </button>
+
 
   <main>
 
-    <!-- 1. ABERTURA -->
+
+    <!-- ==============================
+         1. ABERTURA
+         ============================== -->
+
     <section class="hero">
+
       <div class="hero-overlay"></div>
+
       <div class="hero-content reveal">
-        <p class="eyebrow">O nosso grande dia</p>
-        <h1>Erika <span> & </span> Isaias</h1>
-        <div class="ornament">✦</div>
-        <p class="date-small">24 • 01 • 2027</p>
-        <p class="scroll-hint">Role para continuar ↓</p>
+
+        <p class="eyebrow">
+          O nosso grande dia
+        </p>
+
+        <h1>
+          Erika <span>&</span> Isaias
+        </h1>
+
+        <div class="ornament">
+          ✦
+        </div>
+
+        <p class="date-small">
+          24 • 01 • 2027
+        </p>
+
+        <p class="scroll-hint">
+          Role para continuar ↓
+        </p>
+
       </div>
+
     </section>
 
-    <!-- 2. MENSAGEM -->
+
+    <!-- ==============================
+         2. MENSAGEM
+         ============================== -->
+
     <section class="message section">
-      <div class="ornament-line">──────── ✦ ────────</div>
 
-      <p class="eyebrow">Um novo capítulo</p>
+      <div class="ornament-line">
+        ──────── ✦ ────────
+      </div>
 
-      <h2>Uma história que<br>queremos celebrar com você.</h2>
+      <p class="eyebrow">
+        Um novo capítulo
+      </p>
+
+      <h2>
+        Uma história que<br>
+        queremos celebrar com você.
+      </h2>
 
       <p class="body-text">
         Com a bênção de Deus e cercados pelas pessoas que amamos,
@@ -49,94 +143,222 @@
       </p>
 
       <blockquote>
+
         “O amor é paciente, o amor é bondoso.”
-        <cite>1 Coríntios 13:4</cite>
+
+        <cite>
+          1 Coríntios 13:4
+        </cite>
+
       </blockquote>
+
     </section>
 
-    <!-- 3. DATA + CONTAGEM -->
-    <section class="details section">
-      <p class="eyebrow">Reserve esta data</p>
 
-      <h2>Nosso casamento</h2>
+    <!-- ==============================
+         3. DATA + CONTAGEM
+         ============================== -->
+
+    <section class="details section">
+
+      <p class="eyebrow">
+        Reserve esta data
+      </p>
+
+      <h2>
+        Nosso casamento
+      </h2>
 
       <div class="date-card">
-        <span>DOMINGO</span>
-        <strong>24</strong>
-        <span>JANEIRO • 2027</span>
+
+        <span>
+          DOMINGO
+        </span>
+
+        <strong>
+          24
+        </strong>
+
+        <span>
+          JANEIRO • 2027
+        </span>
+
       </div>
 
-      <p class="time">às <strong>15:00</strong></p>
+      <p class="time">
+        às <strong>15:00</strong>
+      </p>
 
-      <div class="countdown-title">FALTAM</div>
-
-      <div class="countdown" id="countdown">
-        <div><strong id="days">00</strong><span>dias</span></div>
-        <div><strong id="hours">00</strong><span>horas</span></div>
-        <div><strong id="minutes">00</strong><span>min</span></div>
-        <div><strong id="seconds">00</strong><span>seg</span></div>
+      <div class="countdown-title">
+        FALTAM
       </div>
+
+      <div
+        class="countdown"
+        id="countdown"
+      >
+
+        <div>
+          <strong id="days">00</strong>
+          <span>dias</span>
+        </div>
+
+        <div>
+          <strong id="hours">00</strong>
+          <span>horas</span>
+        </div>
+
+        <div>
+          <strong id="minutes">00</strong>
+          <span>min</span>
+        </div>
+
+        <div>
+          <strong id="seconds">00</strong>
+          <span>seg</span>
+        </div>
+
+      </div>
+
     </section>
 
-    <!-- 4. LOCAL -->
+
+    <!-- ==============================
+         4. LOCAL
+         ============================== -->
+
     <section class="location section">
-      <p class="eyebrow">Onde será?</p>
-      <h2>Esperamos você<br>lá.</h2>
+
+      <p class="eyebrow">
+        Onde será?
+      </p>
+
+      <h2>
+        Esperamos você<br>
+        lá.
+      </h2>
 
       <div class="location-card">
-        <div class="location-icon">⌖</div>
-        <h3>Local da cerimônia</h3>
+
+        <div class="location-icon">
+          ⌖
+        </div>
+
+        <h3>
+          Local da cerimônia
+        </h3>
+
         <p>
           Bamboo recepções<br>
-          Av. Pref. Severino Bezerra Cabral, 3961 <br>  Vila Cabral<br>
+          Av. Pref. Severino Bezerra Cabral, 3961<br>
+          Vila Cabral<br>
           Campina Grande — PB
         </p>
-        <a class="button button-outline"
-           href="https://maps.app.goo.gl/mCFK1LQAPghhnXLQ6"
-           target="_blank"
-           rel="noopener">
+
+        <a
+          class="button button-outline"
+          href="https://maps.app.goo.gl/mCFK1LQAPghhnXLQ6"
+          target="_blank"
+          rel="noopener"
+        >
           COMO CHEGAR
         </a>
+
       </div>
+
     </section>
 
-    <!-- 5. AÇÕES -->
+
+    <!-- ==============================
+         5. AÇÕES
+         ============================== -->
+
     <section class="actions section">
-      <p class="eyebrow">Faça parte desse momento</p>
-      <h2>Esperamos<br>por você.</h2>
+
+      <p class="eyebrow">
+        Faça parte desse momento
+      </p>
+
+      <h2>
+        Esperamos<br>
+        por você.
+      </h2>
 
       <div class="buttons">
-        <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSdFtFYezLOGTJmAFhmQpZX4OYwaTu7vbdn7bB1lo8fECZkR2w/viewform?usp=publish-editor" target="_blank" rel="noopener">
+
+        <a
+          class="button"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdFtFYezLOGTJmAFhmQpZX4OYwaTu7vbdn7bB1lo8fECZkR2w/viewform?usp=publish-editor"
+          target="_blank"
+          rel="noopener"
+        >
           CONFIRMAR PRESENÇA
         </a>
 
-        <a class="button button-outline" href="presentes.html" >
+
+        <a
+          class="button button-outline"
+          href="presentes.html"
+        >
           LISTA DE PRESENTES
         </a>
 
-        <a class="button button-outline" href="manual.html" id="giftButton">
+
+        <a
+          class="button button-outline"
+          href="manual.html"
+          id="giftButton"
+        >
           MANUAL DOS CONVIDADOS
         </a>
+
       </div>
 
       <p class="small-note">
         Sua confirmação nos ajudará a preparar tudo com muito carinho.
       </p>
+
     </section>
 
-    <!-- 6. ENCERRAMENTO / SEGUNDA FOTO -->
+
+    <!-- ==============================
+         6. ENCERRAMENTO / SEGUNDA FOTO
+         ============================== -->
+
     <section class="closing">
+
       <div class="closing-overlay"></div>
+
       <div class="closing-content reveal">
-        <p class="eyebrow">Com carinho</p>
-        <h2>Será uma alegria <br>ter você conosco <br> neste dia tão especial.</h2>
-        <div class="ornament">✦</div>
-        <p>Erika & Isaias</p>
+
+        <p class="eyebrow">
+          Com carinho
+        </p>
+
+        <h2>
+          Será uma alegria <br>
+          ter você conosco <br>
+          neste dia tão especial.
+        </h2>
+
+        <div class="ornament">
+          ✦
+        </div>
+
+        <p>
+          Erika & Isaias
+        </p>
+
       </div>
+
     </section>
+
 
   </main>
 
+
   <script src="script.js"></script>
+
 </body>
+
 </html>
